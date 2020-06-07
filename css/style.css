@@ -6,7 +6,8 @@
   border: none;
   border-radius: 2px;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 13px; }
 
 body {
   background-image: url("../images/pest-background.jpg");
@@ -17,7 +18,7 @@ body {
 
 .top-header {
   justify-content: space-between;
-  border-bottom: 1px solid grey; }
+  border-bottom: 1px solid #4f4f4f; }
   .top-header p {
     font-size: 12px; }
     .top-header p:nth-of-type(2) {
@@ -33,7 +34,7 @@ body {
     object-fit: contain; }
   .menu-section .menu {
     justify-content: space-between;
-    width: 50%; }
+    width: 53%; }
     .menu-section .menu ul {
       list-style: none;
       margin: 0;
@@ -55,26 +56,26 @@ body {
         .menu-section .menu ul li:nth-of-type(4):hover::after {
           width: 95%; }
     .menu-section .menu button {
-      padding: 10px 15px;
-      font-size: 13px; }
+      padding: 10px 15px; }
 
 .banner {
   margin-top: 50px; }
   .banner h1 {
     font-size: 60px;
-    font-weight: 700; }
-    .banner h1:nth-of-type(2) {
-      position: relative; }
-      .banner h1:nth-of-type(2)::after {
-        position: absolute;
-        content: '';
-        left: 0;
-        bottom: -20px;
-        width: 10%;
-        height: 3px;
-        background-color: #ed4721; }
+    font-weight: 700;
+    color: #1c1c1c;
+    position: relative; }
+    .banner h1::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -20px;
+      width: 10%;
+      height: 3px;
+      background-color: #ed4721; }
   .banner p, .banner h5 {
-    font-weight: 700; }
+    font-weight: 700;
+    color: #1c1c1c; }
   .banner h5 {
     margin-top: 40px; }
   .banner .btn {
