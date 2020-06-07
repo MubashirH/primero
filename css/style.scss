@@ -1,0 +1,99 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    background-color: #ed4721;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+body {
+    background-image: url('../images/pest-background.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+
+.top-header {
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    p { 
+        font-size: 12px;
+        &:nth-of-type(2) { color: white;}
+    }
+    .address {
+        span { color: rgb(87, 87, 87); }
+    }
+}
+
+.menu-section {
+    justify-content: space-between;
+    // margin: 10px 0;
+    align-items: center;
+    img { width: 20%; object-fit: contain; }
+    .menu {
+        justify-content: space-between;
+        width: 50%;
+        ul { 
+            list-style: none;
+            margin: 0; 
+            align-items: center;
+            li{ 
+            position: relative;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            span { margin: 0 15px;}
+            &:hover::after {
+                position: absolute;
+                content: '';
+                left: 3%;
+                bottom: -100%;
+                width: 55%;
+                background-color: #ed4721;
+                height: 5px;
+            }
+            &:nth-of-type(4) {
+                &:hover::after { width: 95%;}
+            }
+        }}
+        button {
+            padding: 10px 15px;
+            font-size: 13px;
+        }
+    }
+}
+
+.banner {
+    margin-top: 50px;
+    h1 { 
+        font-size: 60px; font-weight: 700;
+        &:nth-of-type(2){
+            position: relative;
+            &::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: -20px;
+                width:10%;
+                height: 3px;
+                background-color: #ed4721;
+            }
+        }
+    }
+    p, h5 { font-weight: 700;}
+    h5 { margin-top: 40px;}
+    .btn {
+        margin-top: 20px;
+        padding: 15px 20px;
+        font-weight: 700;
+    }
+}

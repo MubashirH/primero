@@ -1,0 +1,85 @@
+* {
+  font-family: 'Montserrat', sans-serif; }
+
+.btn {
+  background-color: #ed4721;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer; }
+
+body {
+  background-image: url("../images/pest-background.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+
+.top-header {
+  justify-content: space-between;
+  border-bottom: 1px solid grey; }
+  .top-header p {
+    font-size: 12px; }
+    .top-header p:nth-of-type(2) {
+      color: white; }
+  .top-header .address span {
+    color: #575757; }
+
+.menu-section {
+  justify-content: space-between;
+  align-items: center; }
+  .menu-section img {
+    width: 20%;
+    object-fit: contain; }
+  .menu-section .menu {
+    justify-content: space-between;
+    width: 50%; }
+    .menu-section .menu ul {
+      list-style: none;
+      margin: 0;
+      align-items: center; }
+      .menu-section .menu ul li {
+        position: relative;
+        color: white;
+        cursor: pointer; }
+        .menu-section .menu ul li span {
+          margin: 0 15px; }
+        .menu-section .menu ul li:hover::after {
+          position: absolute;
+          content: '';
+          left: 3%;
+          bottom: -100%;
+          width: 55%;
+          background-color: #ed4721;
+          height: 5px; }
+        .menu-section .menu ul li:nth-of-type(4):hover::after {
+          width: 95%; }
+    .menu-section .menu button {
+      padding: 10px 15px;
+      font-size: 13px; }
+
+.banner {
+  margin-top: 50px; }
+  .banner h1 {
+    font-size: 60px;
+    font-weight: 700; }
+    .banner h1:nth-of-type(2) {
+      position: relative; }
+      .banner h1:nth-of-type(2)::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -20px;
+        width: 10%;
+        height: 3px;
+        background-color: #ed4721; }
+  .banner p, .banner h5 {
+    font-weight: 700; }
+  .banner h5 {
+    margin-top: 40px; }
+  .banner .btn {
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-weight: 700; }
+
+/*# sourceMappingURL=style.css.map */
