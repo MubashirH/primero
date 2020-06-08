@@ -15,7 +15,7 @@
 
 
 body {
-    background-image: url('../images/pest-background.jpg');
+    background-image: url('../images/back.png');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +29,6 @@ body {
     border-bottom: 1px solid #4f4f4f;
     p { 
         font-size: 12px;
-        &:nth-of-type(2) { color: white;}
     }
     .address {
         span { color: rgb(87, 87, 87); }
@@ -40,7 +39,7 @@ body {
     justify-content: space-between;
     // margin: 10px 0;
     align-items: center;
-    img { width: 20%; object-fit: contain; }
+    img { width: 8%; margin-top: 5px; object-fit: contain; }
     .menu {
         justify-content: space-between;
         width: 53%;
@@ -50,7 +49,6 @@ body {
             align-items: center;
             li{
             position: relative;
-            color: rgb(255, 255, 255);
             cursor: pointer;
             span { margin: 0 15px;}
             &:hover::after {

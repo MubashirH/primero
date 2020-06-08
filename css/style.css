@@ -10,7 +10,7 @@
   font-size: 13px; }
 
 body {
-  background-image: url("../images/pest-background.jpg");
+  background-image: url("../images/back.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,8 +21,6 @@ body {
   border-bottom: 1px solid #4f4f4f; }
   .top-header p {
     font-size: 12px; }
-    .top-header p:nth-of-type(2) {
-      color: white; }
   .top-header .address span {
     color: #575757; }
 
@@ -30,7 +28,8 @@ body {
   justify-content: space-between;
   align-items: center; }
   .menu-section img {
-    width: 20%;
+    width: 8%;
+    margin-top: 5px;
     object-fit: contain; }
   .menu-section .menu {
     justify-content: space-between;
@@ -41,7 +40,6 @@ body {
       align-items: center; }
       .menu-section .menu ul li {
         position: relative;
-        color: white;
         cursor: pointer; }
         .menu-section .menu ul li span {
           margin: 0 15px; }
