@@ -3,7 +3,7 @@
 }
 
 .btn {
-    background-color: #ed4721;
+    background-color: #00a5a7;
     border: none;
     border-radius: 2px;
     color: white;
@@ -41,15 +41,16 @@ body {
     align-items: center;
     img { width: 8%; margin-top: 5px; object-fit: contain; }
     .menu {
-        justify-content: space-between;
-        width: 53%;
+        width: 100%;
         ul { 
             list-style: none;
             margin: 0; 
+            padding: 0;
             align-items: center;
             li{
             position: relative;
             cursor: pointer;
+            font-weight: 500;
             span { margin: 0 15px;}
             &:hover::after {
                 position: absolute;
@@ -57,7 +58,7 @@ body {
                 left: 3%;
                 bottom: -100%;
                 width: 55%;
-                background-color: #ed4721;
+                background-color: #00a5a7;
                 height: 5px;
             }
             &:nth-of-type(4) {
@@ -81,7 +82,7 @@ body {
                 bottom: -20px;
                 width:10%;
                 height: 3px;
-                background-color: #ed4721;
+                background-color: #00a5a7;
             }
     }
     p, h5 { font-weight: 700; color: #1c1c1c;}

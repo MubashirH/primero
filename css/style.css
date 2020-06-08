@@ -2,7 +2,7 @@
   font-family: 'Montserrat', sans-serif; }
 
 .btn {
-  background-color: #ed4721;
+  background-color: #00a5a7;
   border: none;
   border-radius: 2px;
   color: white;
@@ -32,15 +32,16 @@ body {
     margin-top: 5px;
     object-fit: contain; }
   .menu-section .menu {
-    justify-content: space-between;
-    width: 53%; }
+    width: 100%; }
     .menu-section .menu ul {
       list-style: none;
       margin: 0;
+      padding: 0;
       align-items: center; }
       .menu-section .menu ul li {
         position: relative;
-        cursor: pointer; }
+        cursor: pointer;
+        font-weight: 500; }
         .menu-section .menu ul li span {
           margin: 0 15px; }
         .menu-section .menu ul li:hover::after {
@@ -49,7 +50,7 @@ body {
           left: 3%;
           bottom: -100%;
           width: 55%;
-          background-color: #ed4721;
+          background-color: #00a5a7;
           height: 5px; }
         .menu-section .menu ul li:nth-of-type(4):hover::after {
           width: 95%; }
@@ -70,7 +71,7 @@ body {
       bottom: -20px;
       width: 10%;
       height: 3px;
-      background-color: #ed4721; }
+      background-color: #00a5a7; }
   .banner p, .banner h5 {
     font-weight: 700;
     color: #1c1c1c; }
