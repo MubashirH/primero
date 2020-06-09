@@ -212,4 +212,16 @@ body {
       margin-top: 30px;
       padding: 5px 25px; }
 
+footer {
+  padding: 5% 0;
+  background-color: #00a5a7; }
+  footer .section {
+    display: flex;
+    justify-content: space-around; }
+    footer .section p, footer .section span, footer .section a {
+      color: white; }
+    footer .section span, footer .section a {
+      font-size: 13px;
+      text-decoration: none; }
+
 /*# sourceMappingURL=style.css.map */

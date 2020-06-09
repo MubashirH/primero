@@ -231,3 +231,15 @@ body {
         .btn { margin-top: 30px; padding: 5px 25px; }
     }
 }
+
+
+footer {
+    padding: 5% 0;
+    background-color: #00a5a7;
+    .section {
+        display: flex;
+        justify-content: space-around;
+        p, span, a { color: white;}
+        span, a { font-size: 13px; text-decoration: none;}
+    }
+}
