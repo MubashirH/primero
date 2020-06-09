@@ -9,6 +9,11 @@
     color: white;
     cursor: pointer;
     font-size: 13px;
+    &:hover {
+        transform: scale(1.01);
+        transition: all 150ms ease-in-out;
+        color: whitesmoke;
+    }
 }
 
 
@@ -72,7 +77,7 @@ body {
 }
 
 .banner {
-    margin-top: 50px;
+    margin: 50px 0 8% 0;
     h1 { 
         font-size: 60px; font-weight: 700; color: #1c1c1c; position: relative;
             &::after {
@@ -91,5 +96,38 @@ body {
         margin-top: 20px;
         padding: 15px 20px;
         font-weight: 700;
+    }
+}
+
+
+.brochure {
+    width: 100%;
+    background-color: white;
+    padding: 8% 0;
+    position: relative;
+    overflow: hidden;
+    .plus {
+        position: absolute;
+        height: 200px;
+        width: 300px;
+        overflow: hidden;
+        left: 20px;
+        color: #ececec;
+        top: -10px;
+        z-index: 0;
+    }
+    .brochure-section {
+        position: relative;
+        z-index: 1;
+        width: 45%;
+        border: 1px solid #cacaca;
+        padding: 30px 50px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .margin { margin: 0 auto 10px auto; display: flex;}
+    .brochure-info { 
+        padding: 20px 0;
+        button { padding: 15px 20px;}
     }
 }
