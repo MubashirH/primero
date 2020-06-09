@@ -16,6 +16,7 @@
         color: whitesmoke;
     }
 }
+.blue { color: #00a5a7;}
 
 
 
@@ -114,9 +115,10 @@ body {
         width: 300px;
         overflow: hidden;
         left: 20px;
-        color: #ececec;
+        color: #00a5a7;
         top: -10px;
         z-index: 0;
+        opacity: 0.3;
     }
     .brochure {
         margin-bottom: 8%;
@@ -124,11 +126,12 @@ body {
             position: relative;
             z-index: 1;
             width: 45%;
-            border: 1px solid #cacaca;
+            border: 1px solid #00a5a7;
             border-radius: 2px;
             padding: 30px 50px;
             display: inline-flex;
             justify-content: space-between;
+            p{ margin:0;}
         }
         .margin { margin: 0 auto 25px auto; display: flex;}
         .brochure-info { 
@@ -187,6 +190,15 @@ body {
 .product {
     padding: 5% 0;
     background-color: white;
+    ul {
+        list-style-type: circle;
+        li {
+            color: #00a5a7;
+            &::marker {
+
+            }
+        }
+    }
 
 }
 
@@ -201,4 +213,21 @@ body {
 
 .connect {
     padding: 5% 0;
+    background-color: white;
+    form {
+        width: 100%;
+        .width { 
+            width: 45%;
+            &:nth-child(2) { float: right;}
+        }
+        label, input, textarea { width: 100%; margin-top: 10px;}
+        input, textarea {
+            border: none;
+            border-bottom: 1px solid #00a5a7;
+            background-color: transparent;
+            border-radius: 2px;
+            &:-moz-placeholder { padding-left: 10px;}
+        }
+        .btn { margin-top: 30px; padding: 5px 25px; }
+    }
 }
