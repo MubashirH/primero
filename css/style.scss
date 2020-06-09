@@ -100,7 +100,7 @@ body {
 }
 
 
-.brochure {
+.white {
     width: 100%;
     background-color: white;
     padding: 8% 0;
@@ -116,18 +116,69 @@ body {
         top: -10px;
         z-index: 0;
     }
-    .brochure-section {
-        position: relative;
-        z-index: 1;
-        width: 45%;
-        border: 1px solid #cacaca;
-        padding: 30px 50px;
-        display: inline-flex;
-        justify-content: space-between;
+    .brochure {
+        margin-bottom: 8%;
+        .brochure-section {
+            position: relative;
+            z-index: 1;
+            width: 45%;
+            border: 1px solid #cacaca;
+            border-radius: 2px;
+            padding: 30px 50px;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .margin { margin: 0 auto 25px auto; display: flex;}
+        .brochure-info { 
+            padding: 20px 0;
+            button { padding: 15px 20px;}
+        }
     }
-    .margin { margin: 0 auto 10px auto; display: flex;}
-    .brochure-info { 
-        padding: 20px 0;
-        button { padding: 15px 20px;}
+    .services {
+        margin: 5% 0;
+        h2 { width: 100%;}
+        .img { 
+            height: inherit;
+            background-position: center;
+            background-size: cover;
+        }
+        .info {
+            position: relative;
+            padding: 5%;
+            h3 {
+                position: absolute;
+                top: 45%;
+                
+            }
+        }
+        .blue { color: #00a5a7;}
+        &.part-1 {
+            .img { background-image: url("../images/services/service2.png"); }
+            h3 { right: -100px; transform: rotate(90Deg) translateY(-50%);}
+        }
+        &.part-2 {
+            .img { background-image: url("../images/services/service3.png"); }
+            h3 { left: -100px; transform: rotate(-90Deg) translateY(-50%);}
+        }
+        &.part-3 {
+            .img { background-image: url("../images/services/service1.png"); }
+            h3 { right: -100px; transform: rotate(90Deg) translateY(-50%);}
+        }
     }
+    .we-do {
+        border: 1px solid #cacacc;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        padding: 3% 0;
+        h2 { width: 100%; margin-bottom: 20px;}
+        .section {
+            border-radius: 2px;
+            padding: 20px 0;
+            border: 1px solid #cacaca;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
 }

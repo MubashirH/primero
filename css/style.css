@@ -86,13 +86,13 @@ body {
     padding: 15px 20px;
     font-weight: 700; }
 
-.brochure {
+.white {
   width: 100%;
   background-color: white;
   padding: 8% 0;
   position: relative;
   overflow: hidden; }
-  .brochure .plus {
+  .white .plus {
     position: absolute;
     height: 200px;
     width: 300px;
@@ -101,20 +101,69 @@ body {
     color: #ececec;
     top: -10px;
     z-index: 0; }
-  .brochure .brochure-section {
-    position: relative;
-    z-index: 1;
-    width: 45%;
-    border: 1px solid #cacaca;
-    padding: 30px 50px;
-    display: inline-flex;
-    justify-content: space-between; }
-  .brochure .margin {
-    margin: 0 auto 10px auto;
-    display: flex; }
-  .brochure .brochure-info {
-    padding: 20px 0; }
-    .brochure .brochure-info button {
-      padding: 15px 20px; }
+  .white .brochure {
+    margin-bottom: 8%; }
+    .white .brochure .brochure-section {
+      position: relative;
+      z-index: 1;
+      width: 45%;
+      border: 1px solid #cacaca;
+      border-radius: 2px;
+      padding: 30px 50px;
+      display: inline-flex;
+      justify-content: space-between; }
+    .white .brochure .margin {
+      margin: 0 auto 25px auto;
+      display: flex; }
+    .white .brochure .brochure-info {
+      padding: 20px 0; }
+      .white .brochure .brochure-info button {
+        padding: 15px 20px; }
+  .white .services {
+    margin: 5% 0; }
+    .white .services h2 {
+      width: 100%; }
+    .white .services .img {
+      height: inherit;
+      background-position: center;
+      background-size: cover; }
+    .white .services .info {
+      position: relative;
+      padding: 5%; }
+      .white .services .info h3 {
+        position: absolute;
+        top: 45%; }
+    .white .services .blue {
+      color: #00a5a7; }
+    .white .services.part-1 .img {
+      background-image: url("../images/services/service2.png"); }
+    .white .services.part-1 h3 {
+      right: -100px;
+      transform: rotate(90Deg) translateY(-50%); }
+    .white .services.part-2 .img {
+      background-image: url("../images/services/service3.png"); }
+    .white .services.part-2 h3 {
+      left: -100px;
+      transform: rotate(-90Deg) translateY(-50%); }
+    .white .services.part-3 .img {
+      background-image: url("../images/services/service1.png"); }
+    .white .services.part-3 h3 {
+      right: -100px;
+      transform: rotate(90Deg) translateY(-50%); }
+  .white .we-do {
+    border: 1px solid #cacacc;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    padding: 3% 0; }
+    .white .we-do h2 {
+      width: 100%;
+      margin-bottom: 20px; }
+    .white .we-do .section {
+      border-radius: 2px;
+      padding: 20px 0;
+      border: 1px solid #cacaca;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
