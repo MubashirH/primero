@@ -1,6 +1,9 @@
 * {
-  font-family: 'cairo', sans-serif;
+  font-family: "cairo", sans-serif;
   font-weight: 400; }
+
+html {
+  scroll-behavior: smooth; }
 
 .btn {
   background-color: #00a5a7;
@@ -48,21 +51,24 @@ body {
       padding: 0;
       align-items: center; }
       .menu-section .menu ul li {
-        position: relative;
-        cursor: pointer;
-        font-weight: 500; }
+        cursor: pointer; }
         .menu-section .menu ul li span {
           margin: 0 15px; }
-        .menu-section .menu ul li:hover::after {
-          position: absolute;
-          content: '';
-          left: 3%;
-          bottom: -100%;
-          width: 55%;
-          background-color: #00a5a7;
-          height: 5px; }
-        .menu-section .menu ul li:nth-of-type(4):hover::after {
-          width: 95%; }
+        .menu-section .menu ul li a {
+          text-decoration: none;
+          position: relative;
+          color: black;
+          font-weight: 500; }
+          .menu-section .menu ul li a:hover::after {
+            position: absolute;
+            content: "";
+            left: 3%;
+            bottom: -100%;
+            width: 95%;
+            background-color: #00a5a7;
+            height: 5px; }
+          .menu-section .menu ul li a:nth-of-type(4):hover::after {
+            width: 95%; }
     .menu-section .menu button {
       padding: 10px 15px; }
 
@@ -75,13 +81,14 @@ body {
     position: relative; }
     .banner h1::after {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       bottom: -20px;
       width: 10%;
       height: 3px;
       background-color: #00a5a7; }
-  .banner p, .banner h5 {
+  .banner p,
+  .banner h5 {
     font-weight: 700;
     color: #1c1c1c; }
   .banner h5 {
@@ -147,17 +154,17 @@ body {
       background-image: url("../images/services/service2.png"); }
     .white .services.part-1 h3 {
       right: -100px;
-      transform: rotate(90Deg) translateY(-50%); }
+      transform: rotate(90deg) translateY(-50%); }
     .white .services.part-2 .img {
       background-image: url("../images/services/spray.jpg"); }
     .white .services.part-2 h3 {
       left: -100px;
-      transform: rotate(-90Deg) translateY(-50%); }
+      transform: rotate(-90deg) translateY(-50%); }
     .white .services.part-3 .img {
       background-image: url("../images/services/crew3.jpg"); }
     .white .services.part-3 h3 {
       right: -100px;
-      transform: rotate(90Deg) translateY(-50%); }
+      transform: rotate(90deg) translateY(-50%); }
 
 .we-do {
   background-color: transparent;
@@ -198,15 +205,19 @@ body {
       width: 45%; }
       .connect form .width:nth-child(2) {
         float: right; }
-    .connect form label, .connect form input, .connect form textarea {
+    .connect form label,
+    .connect form input,
+    .connect form textarea {
       width: 100%;
       margin-top: 10px; }
-    .connect form input, .connect form textarea {
+    .connect form input,
+    .connect form textarea {
       border: none;
       border-bottom: 1px solid #00a5a7;
       background-color: transparent;
       border-radius: 2px; }
-      .connect form input:-moz-placeholder, .connect form textarea:-moz-placeholder {
+      .connect form input:-moz-placeholder,
+      .connect form textarea:-moz-placeholder {
         padding-left: 10px; }
     .connect form .btn {
       margin-top: 30px;
@@ -218,9 +229,12 @@ footer {
   footer .section {
     display: flex;
     justify-content: space-around; }
-    footer .section p, footer .section span, footer .section a {
+    footer .section p,
+    footer .section span,
+    footer .section a {
       color: white; }
-    footer .section span, footer .section a {
+    footer .section span,
+    footer .section a {
       font-size: 13px;
       text-decoration: none; }
 
