@@ -1,5 +1,6 @@
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'cairo', sans-serif;
+    font-weight: 400;
 }
 
 .btn {
@@ -20,11 +21,12 @@
 
 
 body {
-    background-image: url('../images/back.png');
+    background-image: url('../images/services/CrewBG3.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    background-attachment: fixed;
 }
 
 
@@ -131,7 +133,7 @@ body {
         .margin { margin: 0 auto 25px auto; display: flex;}
         .brochure-info { 
             padding: 20px 0;
-            button { padding: 15px 20px;}
+            .btn { padding: 15px 20px;}
         }
     }
     .services {
@@ -157,28 +159,42 @@ body {
             h3 { right: -100px; transform: rotate(90Deg) translateY(-50%);}
         }
         &.part-2 {
-            .img { background-image: url("../images/services/service3.png"); }
+            .img { background-image: url("../images/services/spray.jpg"); }
             h3 { left: -100px; transform: rotate(-90Deg) translateY(-50%);}
         }
         &.part-3 {
-            .img { background-image: url("../images/services/service1.png"); }
+            .img { background-image: url("../images/services/crew3.jpg"); }
             h3 { right: -100px; transform: rotate(90Deg) translateY(-50%);}
         }
     }
-    .we-do {
-        border: 1px solid #cacacc;
-        border-right-color: transparent;
-        border-left-color: transparent;
-        padding: 3% 0;
-        h2 { width: 100%; margin-bottom: 20px;}
-        .section {
-            border-radius: 2px;
-            padding: 20px 0;
-            border: 1px solid #cacaca;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
+    
+}
+.we-do {
+    background-color: transparent;
+    padding: 5% 0;
+    h2 { width: 100%; margin-bottom: 20px;}
+    .section {
+        border-radius: 2px;
+        padding: 20px 0;
+        border: 1px solid #00a4a7b6;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
+}
 
+.product {
+    padding: 5% 0;
+    background-color: white;
+
+}
+
+.about {
+    padding: 0 0 5% 0;
+    background-color: white;
+}
+
+.clients {
+    padding: 5% 0;
 }

@@ -1,5 +1,6 @@
 * {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'cairo', sans-serif;
+  font-weight: 400; }
 
 .btn {
   background-color: #00a5a7;
@@ -14,11 +15,12 @@
     color: whitesmoke; }
 
 body {
-  background-image: url("../images/back.png");
+  background-image: url("../images/services/CrewBG3.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  background-attachment: fixed; }
 
 .top-header {
   justify-content: space-between;
@@ -117,7 +119,7 @@ body {
       display: flex; }
     .white .brochure .brochure-info {
       padding: 20px 0; }
-      .white .brochure .brochure-info button {
+      .white .brochure .brochure-info .btn {
         padding: 15px 20px; }
   .white .services {
     margin: 5% 0; }
@@ -141,29 +143,40 @@ body {
       right: -100px;
       transform: rotate(90Deg) translateY(-50%); }
     .white .services.part-2 .img {
-      background-image: url("../images/services/service3.png"); }
+      background-image: url("../images/services/spray.jpg"); }
     .white .services.part-2 h3 {
       left: -100px;
       transform: rotate(-90Deg) translateY(-50%); }
     .white .services.part-3 .img {
-      background-image: url("../images/services/service1.png"); }
+      background-image: url("../images/services/crew3.jpg"); }
     .white .services.part-3 h3 {
       right: -100px;
       transform: rotate(90Deg) translateY(-50%); }
-  .white .we-do {
-    border: 1px solid #cacacc;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    padding: 3% 0; }
-    .white .we-do h2 {
-      width: 100%;
-      margin-bottom: 20px; }
-    .white .we-do .section {
-      border-radius: 2px;
-      padding: 20px 0;
-      border: 1px solid #cacaca;
-      display: flex;
-      justify-content: space-around;
-      align-items: center; }
+
+.we-do {
+  background-color: transparent;
+  padding: 5% 0; }
+  .we-do h2 {
+    width: 100%;
+    margin-bottom: 20px; }
+  .we-do .section {
+    border-radius: 2px;
+    padding: 20px 0;
+    border: 1px solid #00a4a7b6;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+.product {
+  padding: 5% 0;
+  background-color: white; }
+
+.about {
+  padding: 0 0 5% 0;
+  background-color: white; }
+
+.clients {
+  padding: 5% 0; }
 
 /*# sourceMappingURL=style.css.map */
