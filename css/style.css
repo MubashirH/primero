@@ -86,6 +86,9 @@
 html {
   scroll-behavior: smooth; }
 
+#home {
+  height: 100vh; }
+
 .btn {
   background-color: #00a5a7;
   border: none;
@@ -125,7 +128,10 @@ body {
     object-fit: contain; }
   .menu-section .menu {
     width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    left: 10px;
+    transition: all 150ms ease-in-out;
+    z-index: 1000; }
     .menu-section .menu .hamburger {
       background-color: rgba(255, 255, 255, 0.514);
       padding: 1%;

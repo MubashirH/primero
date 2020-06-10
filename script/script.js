@@ -1,21 +1,9 @@
-$(window).scroll( function() {
-    var white = $('.white');
-    var product = $('.product').offset();
-    var window = $(this).scrollTop();
-    if ( window > 2000 && window < product.top) {
-        $('body').css('background-image','url("images/services/CrewBG3.jpg")');
-    } 
-    else if( window > product.top) {
-        $('body').css('background-image','url("images/back.png")');
-    }
-    else if( window < 2000) {
-        $('body').css('background-image','url("images/services/SprayBG2.jpg")');
-    }
-});
-
 
 $(document).ready( function() {
     //menu initiatlization
+    if ($(window).scrollTop() > 150) { $('.menu').css('position','fixed');}
+
+
     var hamburger = $('.hamburger');
     hamburger.click(function () {
         var classes = $('#menu').attr('class');
@@ -34,6 +22,18 @@ $(document).ready( function() {
         return false;
     });
 
+    $('.menu ul li').click( function() { menuClose(); })
+
+
+    function menuClose() {
+        $('.menu ul').css({'animation-name':'slide-out'});
+        $('.hamburger').css({'border-top-right-radius':'5px', 'border-bottom-right-radius':'5px'});
+        setTimeout( function() {
+            $('.menu ul').css({'display':'none'});
+        }, 1000);
+        hamburger.toggleClass('is-active');
+    }
+
 
     //client slider
     var clientSwiper = new Swiper('.swiper-container', {
@@ -47,4 +47,28 @@ $(document).ready( function() {
             disableOnInteraction: true
         }
     })
+
+
+    $(window).scroll( function() {
+        var product = $('.product').offset();
+        var window = $(this).scrollTop();
+        if ( window > 2000 && window < product.top) {
+            $('body').css('background-image','url("images/services/CrewBG3.jpg")');
+        } 
+        else if( window > product.top) {
+            $('body').css('background-image','url("images/back.png")');
+        }
+        else if( window < 2000) {
+            $('body').css('background-image','url("images/services/SprayBG2.jpg")');
+        }
+    
+        
+        if ( $('#menu').attr('class') === 'hamburger hamburger--spin is-active') { menuClose(); }
+    
+        if ( window > 150) {
+            $('.menu').css('position','fixed');
+        } else {
+            $('.menu').css('position','relative');
+        }
+    });
 });
