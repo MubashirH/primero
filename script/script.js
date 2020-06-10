@@ -14,7 +14,28 @@ $(window).scroll( function() {
 });
 
 
-$(document).read( function() {
+$(document).ready( function() {
+    //menu initiatlization
+    var hamburger = $('.hamburger');
+    hamburger.click(function () {
+        var classes = $('#menu').attr('class');
+        if ( classes === 'hamburger hamburger--spin is-active') {
+            $('.menu ul').css({'animation-name':'slide-out'});
+            $('.hamburger').css({'border-top-right-radius':'5px', 'border-bottom-right-radius':'5px'});
+            setTimeout( function() {
+                $('.menu ul').css({'display':'none'});
+            }, 1000);
+        }
+        else {
+            $('.menu ul').css({'display':'flex','animation-name':'slide-in'});
+            $('.hamburger').css({'border-top-right-radius':'0px', 'border-bottom-right-radius':'0px'});
+        }
+        hamburger.toggleClass('is-active');
+        return false;
+    });
+
+
+    //client slider
     var clientSwiper = new Swiper('.swiper-container', {
         slidesPerView: 6,
         spaceBetween: 30,
