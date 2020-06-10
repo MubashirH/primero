@@ -113,7 +113,7 @@ body {
         transition: all 150ms ease-in-out;
         z-index: 1000;
         .hamburger {
-            background-color: rgba(255, 255, 255, 0.514);
+            background-color: rgba(255, 255, 255, 0.774);
             padding: 1%;
             display:  flex;
             border-radius: 5px;
@@ -134,7 +134,7 @@ body {
         }
         ul {
             list-style: none;
-            background-color: rgba(255, 255, 255, 0.514);
+            background-color: rgba(255, 255, 255, 0.774);
             margin: 0px;
             padding: 0  30px;
             border-top-right-radius: 5px;
@@ -235,11 +235,11 @@ body {
             width: 45%;
             border: 1px solid #00a5a7;
             border-radius: 2px;
-            padding: 30px 50px;
+            padding: 30px 30px;
             display: inline-flex;
-            justify-content: space-between;
+            img { width: 40%; margin-right: 30px }
             p {
-                margin: 0;
+                margin: 0; direction: rtl;
             }
         }
         .margin {
@@ -310,14 +310,17 @@ body {
         width: 100%;
         margin-bottom: 20px;
     }
+    
     .section {
         border-radius: 2px;
         padding: 20px 0;
         border: 1px solid #00a4a7b6;
         background-color: white;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        img { height: 50%; margin-bottom: 10px;}
     }
 }
 
@@ -346,8 +349,12 @@ body {
 .connect {
     padding: 5% 0;
     background-color: white;
+    img { width: 80%}
     form {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .width {
             width: 45%;
             &:nth-child(2) {

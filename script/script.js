@@ -3,6 +3,9 @@ $(document).ready( function() {
     //menu initiatlization
     if ($(window).scrollTop() > 150) { $('.menu').css('position','fixed');}
 
+    var weHeight = $('.box').width();
+    $('.box .section').css('height',weHeight);
+
 
     var hamburger = $('.hamburger');
     hamburger.click(function () {
