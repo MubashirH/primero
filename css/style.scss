@@ -3,62 +3,115 @@
     font-weight: 400;
 }
 
-@keyframes slide-in { 
-    0% { transform: translateX(-200%); }
-    100% { transform: translateX(0%); }
+@keyframes slide-in {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
 @keyframes slide-out {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-200%); }
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
 }
 
 //mixing for mediaqueries
 @mixin breakpoint($screen) {
-    @media (max-width: $screen+'px') {
+    @media (max-width: $screen+"px") {
         @content;
     }
- }
+}
 
-
- // h tags and p tags media queries
- h1 {
-     @include breakpoint(1020) { font-size: 36px; }
-     @include breakpoint(900) {font-size: 34px; }
-     @include breakpoint(786) {font-size: 30px; }
-     @include breakpoint(570) {font-size: 26px; }
-     @include breakpoint(480) {font-size: 22px; }
-     @include breakpoint(420) {font-size: 20px; }
- }
- h2 {
-     @include breakpoint(1020) { font-size: 28px; }
-     @include breakpoint(900) { font-size: 26px; }
-     @include breakpoint(786) { font-size: 22px; }
-     @include breakpoint(570) {font-size: 20px; }
-     @include breakpoint(480) {font-size: 18px; }
- }
- h3 {
-     @include breakpoint(1020) { font-size: 24px; }
-     @include breakpoint(900) { font-size: 22px; }
-     @include breakpoint(786) { font-size: 18px; }
-     @include breakpoint(570) {font-size: 16px; }
-     @include breakpoint(480) {font-size: 14px; }
- }
- h4 {
-     @include breakpoint(1020) { font-size: 21px; }
-     @include breakpoint(900) { font-size: 19px; }
-     @include breakpoint(786) { font-size: 15px; }
-     @include breakpoint(570) {font-size: 13px; }
- }
- h5 {
-    @include breakpoint(786) { font-size: 14px; }
-    @include breakpoint(570) {font-size: 12px; }
- }
+// h tags and p tags media queries
+h1 {
+    @include breakpoint(1020) {
+        font-size: 36px;
+    }
+    @include breakpoint(900) {
+        font-size: 34px;
+    }
+    @include breakpoint(786) {
+        font-size: 30px;
+    }
+    @include breakpoint(570) {
+        font-size: 26px;
+    }
+    @include breakpoint(480) {
+        font-size: 22px;
+    }
+    @include breakpoint(420) {
+        font-size: 20px;
+    }
+}
+h2 {
+    @include breakpoint(1020) {
+        font-size: 28px;
+    }
+    @include breakpoint(900) {
+        font-size: 26px;
+    }
+    @include breakpoint(786) {
+        font-size: 22px;
+    }
+    @include breakpoint(570) {
+        font-size: 20px;
+    }
+    @include breakpoint(480) {
+        font-size: 18px;
+    }
+}
+h3 {
+    @include breakpoint(1020) {
+        font-size: 24px;
+    }
+    @include breakpoint(900) {
+        font-size: 22px;
+    }
+    @include breakpoint(786) {
+        font-size: 18px;
+    }
+    @include breakpoint(570) {
+        font-size: 16px;
+    }
+    @include breakpoint(480) {
+        font-size: 14px;
+    }
+}
+h4 {
+    @include breakpoint(1020) {
+        font-size: 21px;
+    }
+    @include breakpoint(900) {
+        font-size: 19px;
+    }
+    @include breakpoint(786) {
+        font-size: 15px;
+    }
+    @include breakpoint(570) {
+        font-size: 13px;
+    }
+}
+h5 {
+    @include breakpoint(786) {
+        font-size: 14px;
+    }
+    @include breakpoint(570) {
+        font-size: 12px;
+    }
+}
 
 html {
     scroll-behavior: smooth;
 }
 
-#home { height: 100vh;}
+#home {
+    height: 100vh;
+}
 
 .btn {
     background-color: #00a5a7;
@@ -115,7 +168,7 @@ body {
         .hamburger {
             background-color: rgba(255, 255, 255, 0.774);
             padding: 1%;
-            display:  flex;
+            display: none;
             border-radius: 5px;
             align-items: center;
             outline: none;
@@ -126,7 +179,8 @@ body {
             .hamburger-inner {
                 background-color: #00a5a7;
                 width: 30px;
-                &::after, &::before {
+                &::after,
+                &::before {
                     background-color: #00a5a7;
                     width: 30px;
                 }
@@ -136,13 +190,10 @@ body {
             list-style: none;
             background-color: rgba(255, 255, 255, 0.774);
             margin: 0px;
-            padding: 0  30px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            padding: 0 30px;
+            border-radius: 5px;
             align-items: center;
             display: none;
-            transition: all 300ms ease-in-out;
-            animation-duration: 1s;
             li {
                 cursor: pointer;
                 div {
@@ -172,6 +223,14 @@ body {
                 }
             }
         }
+        .no-burger { display: flex; padding: 10px 20px;}
+        .with-burger { 
+            display: none; 
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            transition: all 300ms ease-in-out;
+            animation-duration: 1s;
+        }
         button {
             padding: 10px 15px;
         }
@@ -179,7 +238,7 @@ body {
 }
 
 .banner {
-    margin: 50px 0 8% 0;
+    height: 100%;
     h1 {
         font-size: 60px;
         font-weight: 700;
@@ -238,9 +297,13 @@ body {
             padding: 30px 30px;
             background-color: white;
             display: inline-flex;
-            img { width: 40%; margin-right: 30px }
+            img {
+                width: 40%;
+                margin-right: 30px;
+            }
             p {
-                margin: 0; direction: rtl;
+                margin: 0;
+                direction: rtl;
             }
         }
         .margin {
@@ -258,6 +321,7 @@ body {
         margin: 5% 0;
         h2 {
             width: 100%;
+            font-weight: 700;
         }
         .img {
             height: inherit;
@@ -311,7 +375,7 @@ body {
         width: 100%;
         margin-bottom: 20px;
     }
-    
+
     .section {
         border-radius: 2px;
         padding: 20px 0;
@@ -321,7 +385,10 @@ body {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        img { height: 50%; margin-bottom: 10px;}
+        img {
+            height: 50%;
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -350,7 +417,10 @@ body {
         .swiper-slide {
             display: flex;
             align-items: center;
-            img { width: 100% ; filter: grayscale(1);}
+            img {
+                width: 100%;
+                filter: grayscale(1);
+            }
         }
     }
 }
@@ -358,7 +428,9 @@ body {
 .connect {
     padding: 5% 0;
     background-color: white;
-    img { width: 80%}
+    img {
+        width: 80%;
+    }
     form {
         width: 100%;
         display: flex;
@@ -399,16 +471,25 @@ footer {
     .section {
         display: flex;
         justify-content: space-around;
-        p,
-        span,
-        a {
-            color: white;
+        img {
+            width: 20%;
         }
-        span,
-        a {
-            font-size: 13px;
-            text-decoration: none;
+        div {
+            display: flex;
+            flex-direction: column;
+            p,
+            span,
+            a {
+                color: white;
+            }
+            span,
+            a {
+                font-size: 13px;
+                text-decoration: none;
+            }
         }
-        img { width: 20%; }
+        &:nth-of-type(2) {
+            img {width: 15%;}
+        }
     }
 }
