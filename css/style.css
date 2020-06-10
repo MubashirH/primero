@@ -234,6 +234,7 @@ body {
       border: 1px solid #00a5a7;
       border-radius: 2px;
       padding: 30px 30px;
+      background-color: white;
       display: inline-flex; }
       .white .brochure .brochure-section img {
         width: 40%;
@@ -313,6 +314,14 @@ body {
 
 .clients {
   padding: 5% 0; }
+  .clients .swiper-container {
+    width: 100%; }
+    .clients .swiper-container .swiper-slide {
+      display: flex;
+      align-items: center; }
+      .clients .swiper-container .swiper-slide img {
+        width: 100%;
+        filter: grayscale(1); }
 
 .connect {
   padding: 5% 0;
@@ -360,5 +369,7 @@ footer {
     footer .section a {
       font-size: 13px;
       text-decoration: none; }
+    footer .section img {
+      width: 20%; }
 
 /*# sourceMappingURL=style.css.map */

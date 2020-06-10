@@ -236,6 +236,7 @@ body {
             border: 1px solid #00a5a7;
             border-radius: 2px;
             padding: 30px 30px;
+            background-color: white;
             display: inline-flex;
             img { width: 40%; margin-right: 30px }
             p {
@@ -344,6 +345,14 @@ body {
 
 .clients {
     padding: 5% 0;
+    .swiper-container {
+        width: 100%;
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            img { width: 100% ; filter: grayscale(1);}
+        }
+    }
 }
 
 .connect {
@@ -400,5 +409,6 @@ footer {
             font-size: 13px;
             text-decoration: none;
         }
+        img { width: 20%; }
     }
 }

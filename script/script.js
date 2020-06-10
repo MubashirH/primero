@@ -46,9 +46,10 @@ $(document).ready( function() {
         loop: true,
         grabCursor: true,
         autoPlay: {
-            delay: 500,
+            delay: 200,
             disableOnInteraction: true
-        }
+        },
+        virtualtranslate: true
     })
 
 
