@@ -350,7 +350,7 @@ body {
           width: 60%; } }
       @media (max-width: 375px) {
         .white .brochure .brochure-section {
-          width: 80%; } }
+          width: 70%; } }
       .white .brochure .brochure-section.first {
         margin: 0 auto 25px auto;
         display: flex; }
@@ -473,8 +473,7 @@ body {
       display: flex;
       align-items: center; }
       .clients .swiper-container .swiper-slide img {
-        width: 100%;
-        filter: grayscale(1); }
+        width: 100%; }
 
 .connect {
   padding: 5% 0;

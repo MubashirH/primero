@@ -65,7 +65,7 @@ $(document).ready( function() {
             $('body').css('background-image','url("images/services/CrewBG3.jpg")');
         } 
         else if( window > product.top) {
-            $('body').css('background-image','url("images/back.png")');
+            $('body').css('background-image','url("images/services/service1.png")');
         }
         else if( window < 2000) {
             $('body').css('background-image','url("images/services/SprayBG2.jpg")');

@@ -349,7 +349,7 @@ body {
             display: inline-flex;
             align-items: center;
             @include breakpoint(480) { width: 60%;}
-            @include breakpoint(375) { width: 80%;}
+            @include breakpoint(375) { width: 70%;}
             &.first {
                 margin: 0 auto 25px auto;
                 display: flex;
@@ -490,7 +490,7 @@ body {
             align-items: center;
             img {
                 width: 100%;
-                filter: grayscale(1);
+                // filter: grayscale(1);
             }
         }
     }
