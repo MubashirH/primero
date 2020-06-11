@@ -5,6 +5,7 @@ $(function()
     {
         if(data.result == 'success')
         {
+            console.log('success');
             $('form#reused_form').hide();
             $('#success_message').show();
             $('#error_message').hide();
@@ -39,7 +40,6 @@ $(function()
 	$('#reused_form').submit(function(e)
       {
         e.preventDefault();
-        console.log();
         $form = $(this);
         //show some response on the button
         $('button[type="submit"]', $form).each(function()
