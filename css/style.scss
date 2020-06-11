@@ -5,18 +5,18 @@
 
 @keyframes slide-in {
     0% {
-        transform: translateX(-200%);
+        transform: translateY(-200%);
     }
     100% {
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
 }
 @keyframes slide-out {
     0% {
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
     100% {
-        transform: translateX(-200%);
+        transform: translateY(-200%);
     }
 }
 
@@ -82,20 +82,6 @@ h3 {
         font-size: 14px;
     }
 }
-h4 {
-    @include breakpoint(1020) {
-        font-size: 21px;
-    }
-    @include breakpoint(900) {
-        font-size: 19px;
-    }
-    @include breakpoint(786) {
-        font-size: 15px;
-    }
-    @include breakpoint(570) {
-        font-size: 13px;
-    }
-}
 h5 {
     @include breakpoint(786) {
         font-size: 14px;
@@ -104,6 +90,11 @@ h5 {
         font-size: 12px;
     }
 }
+p {
+    @include breakpoint(1200) { font-size: 14px; }
+    @include breakpoint(1020) { font-size: 13px; }
+    @include breakpoint(768) { font-size: 12px; }
+}
 
 html {
     scroll-behavior: smooth;
@@ -111,6 +102,7 @@ html {
 
 #home {
     height: 100vh;
+    @include breakpoint(767) { height: auto;}
 }
 
 .btn {
@@ -162,7 +154,6 @@ body {
     .menu {
         width: 100%;
         overflow: hidden;
-        left: 10px;
         transition: all 150ms ease-in-out;
         z-index: 1000;
         .hamburger {
@@ -194,11 +185,18 @@ body {
             border-radius: 5px;
             align-items: center;
             display: none;
+            @include breakpoint(600) { padding: 0 10px;}
+            @include breakpoint(437) { padding: 0 5px;}
+            @include breakpoint(320) { padding: 0 2px;}
             li {
                 cursor: pointer;
                 div {
                     display: inline-block;
                     margin: 0 30px;
+                    @include breakpoint(900) { margin: 0 15px;}
+                    @include breakpoint(600) { margin: 0 10px;}
+                    @include breakpoint(480) { margin: 0 5px;}
+                    @include breakpoint(320) { margin: 0 2px;}
                 }
                 a {
                     text-decoration: none;
@@ -206,14 +204,10 @@ body {
                     color: black;
                     font-weight: 500;
                     display: inline-block;
-                    &:hover::after {
-                        position: absolute;
-                        content: "";
-                        left: 3%;
-                        bottom: -100%;
-                        width: 95%;
-                        background-color: #00a5a7;
-                        height: 5px;
+                    @include breakpoint(480) { font-size: 13px;}
+                    @include breakpoint(320) { font-size: 12px;}
+                    &:hover{
+                        color: #00a5a7;
                     }
                     &:nth-of-type(4) {
                         &:hover::after {
@@ -223,13 +217,42 @@ body {
                 }
             }
         }
-        .no-burger { display: flex; padding: 10px 20px;}
+        .no-burger { 
+            display: flex; padding: 10px 20px; justify-content: center;
+            @include breakpoint(600) { padding: 10px;}
+        }
         .with-burger { 
             display: none; 
+            padding: 0;
+            border-top-right-radius: 0;
             border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
             transition: all 300ms ease-in-out;
             animation-duration: 1s;
+            li {
+                margin: 0 15px;
+                padding: 10px 0; 
+                border-bottom: 1px solid black;
+                @include breakpoint(600) {margin: 0 10px;}
+                a{
+                    height: 30px; width: 30px;
+                    background-position: center; background-size: contain;
+                    position: relative;
+                    &:hover::after {
+                        position: absolute;
+                        left: 50px;
+                        background-color: #00a5a7;
+                        border-radius: 5px;
+                        color: white;
+                        padding : 5px;
+                        font-size: 12px;
+                    }
+                }
+                &:nth-of-type(1) { a {background-image: url("../images/icons/home.svg"); &:hover::after{ content:'HOME' }}}
+                &:nth-of-type(2) { a {background-image: url("../images/icons/technical.svg"); &:hover::after{ content:'SERVICES' }}}
+                &:nth-of-type(3) { a {background-image: url("../images/icons/cleaning-spray.svg"); &:hover::after{ content:'PRODUCT' }}}
+                &:nth-of-type(4) { a {background-image: url("../images/icons/about-us.svg"); &:hover::after{ content:'ABOUT' }}}
+                &:nth-of-type(5) { border:none; a {background-image: url("../images/icons/conversation.svg"); &:hover::after{ content:'CONNECT' }}}
+            }
         }
         button {
             padding: 10px 15px;
@@ -238,7 +261,22 @@ body {
 }
 
 .banner {
-    height: 100%;
+    height: 95%;
+    @include breakpoint(767) {
+        display: block !important;
+        height: 100%;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .logo.large {
+        width: 35%;
+        @include breakpoint(767) { display: none;}
+    }
+    .logo.small {
+        width: 35%;
+        display: none;
+        @include breakpoint(767) { display: block; margin: 0 auto;}
+    }
     h1 {
         font-size: 60px;
         font-weight: 700;
@@ -252,7 +290,9 @@ body {
             width: 10%;
             height: 3px;
             background-color: #00a5a7;
+            @include breakpoint(767) { left:50%; transform:translateX(-50%); width:20%}
         }
+        @include breakpoint(1020) { font-size: 45px;}
     }
     p,
     h5 {
@@ -297,9 +337,14 @@ body {
             padding: 30px 30px;
             background-color: white;
             display: inline-flex;
+            align-items: center;
+            &.first {
+                img { height: 40%; }
+            }
             img {
                 width: 40%;
                 margin-right: 30px;
+                @include breakpoint(600) { width: 50%; }
             }
             p {
                 margin: 0;
@@ -312,6 +357,10 @@ body {
         }
         .brochure-info {
             padding: 20px 0;
+            @include breakpoint(991) {
+                margin-top: 20px;
+                text-align: center;
+            }
             .btn {
                 padding: 15px 20px;
             }
@@ -342,10 +391,12 @@ body {
         &.part-1 {
             .img {
                 background-image: url("../images/services/service2.png");
+                background-position: top;
             }
             h3 {
                 right: -100px;
                 transform: rotate(90deg) translateY(-50%);
+                @include breakpoint(768) { right: -50px; }
             }
         }
         &.part-2 {
@@ -355,6 +406,7 @@ body {
             h3 {
                 left: -100px;
                 transform: rotate(-90deg) translateY(-50%);
+                @include breakpoint(768) { left: -50px; }
             }
         }
         &.part-3 {
@@ -364,6 +416,7 @@ body {
             h3 {
                 right: -100px;
                 transform: rotate(90deg) translateY(-50%);
+                @include breakpoint(768) { right: -50px; }
             }
         }
     }
@@ -385,6 +438,12 @@ body {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        @include breakpoint(991) {
+            padding: 10px 0;
+            margin-bottom: 20px;
+            h3 { font-size: 18px;}
+        }
+        @include breakpoint(767) { width: 50%;}
         img {
             height: 50%;
             margin-bottom: 10px;
@@ -471,6 +530,7 @@ footer {
     .section {
         display: flex;
         justify-content: space-around;
+        @include breakpoint(767) { margin-bottom: 20px}
         img {
             width: 20%;
         }
