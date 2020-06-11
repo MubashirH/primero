@@ -23,7 +23,7 @@ $(document).ready( function() {
         }
         else {
             $('.menu').css({'display':'block'});
-            $('.menu .with-burger').css({'display':'inline flow-root list-item','animation-name':'slide-in'});
+            $('.menu .with-burger').css({'display':'inline-block','animation-name':'slide-in'});
             $('.hamburger').css({'border-bottom-left-radius':'0px', 'border-bottom-right-radius':'0px'});
         }
         hamburger.toggleClass('is-active');
