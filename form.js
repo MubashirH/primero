@@ -37,8 +37,9 @@ $(function()
         }//else
     }
 
-	$('#reused_form').submit(function(e)
-      {
+    $('#reused_form').submit(function(e)
+    {
+        console.log('submitted');
         e.preventDefault();
         $form = $(this);
         //show some response on the button
@@ -52,7 +53,7 @@ $(function()
         });
         $.ajax({
                 type: "POST",
-                url: '../handler.php',
+                url: 'handler.php',
                 data: $form.serialize(),
                 success: after_form_submitted,
                 dataType: 'json' 
