@@ -54,7 +54,11 @@ $(document).ready( function() {
             delay: 200,
             disableOnInteraction: true
         },
-        virtualtranslate: true
+        virtualtranslate: true,
+        breakpoints: {
+            768: { sliderPerView:5 },
+            480: { slidesPerView: 4 }
+        }
     })
 
 
