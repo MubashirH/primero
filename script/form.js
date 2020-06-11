@@ -13,7 +13,7 @@ $(function()
         else
         {
             $('#error_message').append('<ul></ul>');
-
+            console.log(data.errors);
             jQuery.each(data.errors,function(key,val)
             {
                 $('#error_message ul').append('<li>'+key+':'+val+'</li>');
@@ -44,6 +44,7 @@ $(function()
         //show some response on the button
         $('button[type="submit"]', $form).each(function()
         {
+            console.log('button');
             $btn = $(this);
             $btn.prop('type','button' ); 
             $btn.prop('orig_label',$btn.text());
