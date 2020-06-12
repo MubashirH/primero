@@ -129,7 +129,7 @@ html {
 }
 
 body {
-    background-image: url("../images/services/SprayBG2.jpg");
+    background-image: url("../images/services/sprayBG2.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -359,8 +359,8 @@ body {
                     height: 100%;
                     @include breakpoint(767) { margin-right: 10px; width: 55%;}
                 }
-                .epa { background-image: url('../images/icons/EPA.svg');}
-                .fast { background-image: url('../images/icons/Fast\ and\ reliable.svg'); }
+                .epa { background-image: url('../images/icons/epa.svg');}
+                .fast { background-image: url('../images/icons/fastandreliable.svg'); }
                 .tech { background-image: url('../images/icons/cleaning-service.svg')}
                 .germ { background-image: url('../images/icons/safe.svg')}
                 p {

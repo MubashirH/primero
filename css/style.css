@@ -106,7 +106,7 @@ html {
   color: #00a5a7; }
 
 body {
-  background-image: url("../images/services/SprayBG2.jpg");
+  background-image: url("../images/services/sprayBG2.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -359,9 +359,9 @@ body {
               margin-right: 10px;
               width: 55%; } }
         .white .brochure .brochure-icons .brochure-section .epa {
-          background-image: url("../images/icons/EPA.svg"); }
+          background-image: url("../images/icons/epa.svg"); }
         .white .brochure .brochure-icons .brochure-section .fast {
-          background-image: url("../images/icons/Fast and reliable.svg"); }
+          background-image: url("../images/icons/fastandreliable.svg"); }
         .white .brochure .brochure-icons .brochure-section .tech {
           background-image: url("../images/icons/cleaning-service.svg"); }
         .white .brochure .brochure-icons .brochure-section .germ {
