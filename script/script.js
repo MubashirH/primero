@@ -45,18 +45,13 @@ $(document).ready( function() {
 
     //client slider
     var clientSwiper = new Swiper('.swiper-container', {
-        slidesPerView: 6,
+        slidesPerView: 5,
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
         grabCursor: true,
-        autoPlay: {
-            delay: 200,
-            disableOnInteraction: true
-        },
-        virtualtranslate: true,
         breakpoints: {
-            768: { sliderPerView:5 },
+            768: { sliderPerView: 5 },
             480: { slidesPerView: 3 }
         }
     })

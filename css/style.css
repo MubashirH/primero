@@ -95,11 +95,12 @@ html {
   border-radius: 2px;
   color: white;
   cursor: pointer;
-  font-size: 13px; }
-  .btn:hover {
-    transform: scale(1.01);
-    transition: all 150ms ease-in-out;
-    color: whitesmoke; }
+  font-size: 13px;
+  transition: 1s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.65, -0.25, 0.25, 1.95); }
+  .btn:hover, .btn:focus, .btn:active {
+    letter-spacing: 0.105rem;
+    color: white; }
 
 .blue {
   color: #00a5a7; }
@@ -341,19 +342,35 @@ body {
         background-color: white;
         display: inline-flex;
         align-items: center;
-        margin: 10px 0; }
+        margin: 10px 0;
+        justify-content: space-between; }
         @media (max-width: 480px) {
           .white .brochure .brochure-icons .brochure-section {
             padding: 20px 10px; } }
-        .white .brochure .brochure-icons .brochure-section img {
+        .white .brochure .brochure-icons .brochure-section .img {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
           width: 40%;
-          margin-right: 20px; }
-          @media (max-width: 600px) {
-            .white .brochure .brochure-icons .brochure-section img {
-              width: 100%; } }
+          margin-right: 20px;
+          height: 100%; }
+          @media (max-width: 767px) {
+            .white .brochure .brochure-icons .brochure-section .img {
+              margin-right: 10px;
+              width: 55%; } }
+        .white .brochure .brochure-icons .brochure-section .epa {
+          background-image: url("../images/icons/EPA.svg"); }
+        .white .brochure .brochure-icons .brochure-section .fast {
+          background-image: url("../images/icons/Fast and reliable.svg"); }
+        .white .brochure .brochure-icons .brochure-section .tech {
+          background-image: url("../images/icons/cleaning-service.svg"); }
+        .white .brochure .brochure-icons .brochure-section .germ {
+          background-image: url("../images/icons/safe.svg"); }
         .white .brochure .brochure-icons .brochure-section p {
-          margin: 0;
-          direction: rtl; }
+          margin: 0; }
+          @media (max-width: 480px) {
+            .white .brochure .brochure-icons .brochure-section p {
+              text-align: center; } }
     .white .brochure .brochure-info {
       padding: 20px 0; }
       @media (max-width: 991px) {
@@ -494,6 +511,9 @@ body {
 .about {
   padding: 0 0 5% 0;
   background-color: white; }
+  @media (max-width: 767px) {
+    .about .mission {
+      margin-top: 20px; } }
   .about .mission-logo, .about .vision-logo {
     margin-right: 15px;
     background-size: contain;
