@@ -57,7 +57,7 @@ $(document).ready( function() {
         virtualtranslate: true,
         breakpoints: {
             768: { sliderPerView:5 },
-            480: { slidesPerView: 4 }
+            480: { slidesPerView: 3 }
         }
     })
 
@@ -93,13 +93,19 @@ $(document).ready( function() {
     if ($(window).width() < 768) {
         var height = $('.services .img').width();
         $('.services .img').css('height',height/1.5);
+        
+        var productHeight = $('.product-img').width();
+        $('.product-img').css('height',productHeight/1.5);
     }
 });
 
 $(window).resize( function() {
     if ($(window).width() < 768) {
-        console.log(1)
-        var height = $('.service .img').width();
-        $('.services .img').css('height',height);
+        var heightServices = $('.service .img').width();
+        $('.services .img').css('height',heightServices);
+
+        var productHeight = $('.product-img').width();
+        $('.product-img').css('height',productHeight);
+
     }
 });

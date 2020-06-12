@@ -235,7 +235,7 @@ body {
                 border-bottom: 1px solid black;
                 a{
                     height: 40px; width: 40px;
-                    background-position: center; background-size: contain;
+                    background-position: center; background-size: contain; background-repeat: no-repeat;
                     position: relative;
                     &:hover::after {
                         position: absolute;
@@ -247,11 +247,11 @@ body {
                         font-size: 12px;
                     }
                 }
-                &:nth-of-type(1) { a {background-image: url("../images/icons/home.svg"); &:hover::after{ content:'HOME' }}}
-                &:nth-of-type(2) { a {background-image: url("../images/icons/service.svg"); &:hover::after{ content:'SERVICES' }}}
-                &:nth-of-type(3) { a {background-image: url("../images/icons/cleaning-spray.svg"); &:hover::after{ content:'PRODUCT' }}}
-                &:nth-of-type(4) { a {background-image: url("../images/icons/about-us.svg"); &:hover::after{ content:'ABOUT' }}}
-                &:nth-of-type(5) { border:none; a {background-image: url("../images/icons/conversation.svg"); &:hover::after{ content:'CONNECT' }}}
+                &:nth-of-type(1) { a {background-image: url("../images/logo.svg"); &:hover::after{ content:'HOME' }}}
+                &:nth-of-type(2) { a {background-image: url("../images/icons/cleaning-service.svg"); &:hover::after{ content:'SERVICES' }}}
+                &:nth-of-type(3) { a {background-image: url("../images/icons/disinfectant.svg"); &:hover::after{ content:'PRODUCT' }}}
+                &:nth-of-type(4) { a {background-image: url("../images/icons/group.svg"); &:hover::after{ content:'ABOUT' }}}
+                &:nth-of-type(5) { border:none; a {background-image: url("../images/icons/mail.svg"); &:hover::after{ content:'CONNECT' }}}
             }
         }
         button {
@@ -328,41 +328,30 @@ body {
     }
     .brochure {
         margin-bottom: 8%;
-        .d-flex {
-            @include breakpoint (480) { 
-                flex-direction: column;
-                justify-content: center !important;
-                .brochure-section {
-                    margin: 0 auto;
-                    &:nth-child(1) { margin-bottom: 25px;}
+        .brochure-icons{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .brochure-section {
+                position: relative;
+                z-index: 1;
+                width: 45%;
+                border: 1px solid #00a5a7;
+                border-radius: 2px;
+                padding: 30px 30px;
+                background-color: white;
+                display: inline-flex;
+                align-items: center;
+                margin: 10px 0;
+                @include breakpoint(480) { padding: 20px 10px;}
+                img {
+                    width: 40%;
+                    margin-right: 20px;
+                    @include breakpoint(600) { width: 100%; }
                 }
-            }
-        }
-        .brochure-section {
-            position: relative;
-            z-index: 1;
-            width: 45%;
-            border: 1px solid #00a5a7;
-            border-radius: 2px;
-            padding: 30px 30px;
-            background-color: white;
-            display: inline-flex;
-            align-items: center;
-            @include breakpoint(480) { width: 60%;}
-            @include breakpoint(375) { width: 70%;}
-            &.first {
-                margin: 0 auto 25px auto;
-                display: flex;
-                img { height: 40%; }
-            }
-            img {
-                width: 40%;
-                margin-right: 30px;
-                @include breakpoint(600) { width: 50%; }
-            }
-            p {
-                margin: 0;
-                direction: rtl;
+                p {
+                    margin: 0;
+                    direction: rtl;
+                }
             }
         }
         .brochure-info {
@@ -397,6 +386,20 @@ body {
         }
         .blue {
             color: #00a5a7;
+        }
+        .show { @include breakpoint(767) { display: none; } }
+        .hide { display: none; 
+            @include breakpoint(767) { 
+                width: 100%;
+                display: block; 
+                position: relative !important;
+                transform: none !important;
+                left: 0 !important;
+                right: 0 !important;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
         }
         &.part-1 {
             .img {
@@ -440,6 +443,7 @@ body {
     h2 {
         width: 100%;
         margin-bottom: 20px;
+        font-weight: 700;
     }
     .box { @include breakpoint(767) { width: 50%;} }
     .section {
@@ -466,12 +470,31 @@ body {
 .product {
     padding: 5% 0;
     background-color: white;
+    @include breakpoint(767) { h3 {text-align: center;}}
+    h2 { font-weight: 700;}
     ul {
         list-style-type: circle;
+        padding-left: 20px;
         li {
             color: #00a5a7;
             &::marker {
             }
+        }
+    }
+    .product-img {
+        background-image: url('../images/back.png');
+        background-position: bottom;
+        background-size: contain;
+        position: relative;
+        background-repeat: no-repeat;
+        @include breakpoint(767) { margin-bottom: 20px;}
+        &::after {
+            position: absolute;
+            content: "";
+            height: 100%; width: 100%;
+            left:0; top:0;
+            z-index: 1000;
+            box-shadow: 1px 1px 1px 1px white;
         }
     }
 }
@@ -479,10 +502,21 @@ body {
 .about {
     padding: 0 0 5% 0;
     background-color: white;
+    .mission-logo, .vision-logo {
+        margin-right: 15px;
+        background-size: contain;
+        height: 30px;
+        width: 30px;
+        background-position: center;
+    }
+    .mission-logo { background-image: url('../images/icons/goal.svg');}
+    .vision-logo { background-image: url('../images/icons/vision.svg');}
+    h2, h3 { font-weight: 500; }
 }
 
 .clients {
     padding: 5% 0;
+    h2 { font-weight: 700;}
     .swiper-container {
         width: 100%;
         .swiper-slide {
@@ -499,6 +533,7 @@ body {
 .connect {
     padding: 5% 0;
     background-color: white;
+    h2 { font-weight: 700; }
     div.d-flex { @include breakpoint(767) { justify-content: center !important;}}
     img {
         width: 80%;
@@ -543,30 +578,30 @@ body {
 footer {
     padding: 5% 0;
     background-color: #00a5a7;
+    h5 { color: white; }
+    h2 { font-weight: 700; color: white;}
     .section {
-        display: flex;
-        justify-content: space-around;
         @include breakpoint(767) { margin-bottom: 20px}
-        img {
-            width: 20%;
+        div.d-flex {}
+        img { width: 20%; }
+        span { color: white; }
+        p { text-align: center; color: white;}
+        a { text-decoration: none; color: white; 
+            @include breakpoint(480) { font-size: 12px;}
         }
-        div {
+        .follow-us {
             display: flex;
-            flex-direction: column;
-            p,
-            span,
+            justify-content: space-evenly;
             a {
-                color: white;
-                @include breakpoint(575) { text-align: center;}
+                display: inline-block;
+                height: 30px;
+                width:30px;
+                background-size: contain;
+                background-position: center;
+                &:nth-of-type(1) { background-image: url("../images/icons/facebook.svg");}
+                &:nth-of-type(2) { background-image: url("../images/icons/instagram.svg");}
+                &:nth-of-type(3) { background-image: url("../images/icons/twitter.svg");}
             }
-            span,
-            a {
-                font-size: 13px;
-                text-decoration: none;
-            }
-        }
-        &:nth-of-type(2) {
-            img {width: 15%;}
         }
     }
 }

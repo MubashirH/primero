@@ -16,6 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="css/hamburger.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -66,14 +67,14 @@
         </div>
         <div class="banner d-flex align-items-center justify-content-around">
             <img class="logo small" SRC="images/logo.svg">
-            <div>
+            <div data-aos="fade-in">
                 <h1>Disinfection Services <br />and Products</h1>
                 <h5>Providing high quality Disinfection Services<br />
-                    and promoting a healthy living environment<br /> by
-                    effectively reducing viruses, bacteria and germs</h5>
+                    and promoting a healthy living environment by<br />
+                    effectively reducing viruses, bacteria and fungi.</h5>
                 <a class="btn" href="#connect">REQUEST SERVICE</a>
             </div>
-            <img class="logo large" SRC="images/logo.svg">
+            <img data-aos="fade-left" class="logo large" SRC="images/logo.svg">
         </div>
     </div>
     <div class="white">
@@ -84,24 +85,26 @@
         </div>
         <div class="container">
             <div class="row brochure">
-                <div class="col-xs-12 col-md-12 col-lg-6">
-                    <div class="brochure-section first">
+                <div class="col-xs-12 col-md-12 col-lg-6 d-flex brochure-icons">
+                    <div data-aos="zoom-in" class="brochure-section first">
                         <img src="images/icons/EPA registered.svg">
                         <p>EPA REGISTERED DISINFECTANTS</p>
                     </div>
-                    <div class=" d-flex justify-content-around ">
-                        <div class="brochure-section">
-                            <img src="images/icons/Fast and reliable.svg">
-                            <p>FAST AND RELIABLE SERVICES</p>
-                        </div>
-                        <div class="brochure-section">
-                            <img src="images/icons/Technicians.svg">
-                            <p>EXTENSIVELY TRAINED TECHNICIANS</p>
-                        </div>
+                    <div data-aos="zoom-in" class="brochure-section">
+                        <img src="images/icons/Fast and reliable.svg">
+                        <p>FAST AND RELIABLE SERVICES</p>
+                    </div>
+                    <div data-aos="zoom-in" class="brochure-section">
+                        <img src="images/icons/cleaning-service.svg">
+                        <p>EXTENSIVELY TRAINED TECHNICIANS</p>
+                    </div>
+                    <div data-aos="zoom-in" class="brochure-section">
+                        <img src="images/icons/safe.svg">
+                        <p>Kills 99.999% Bacteria & Viruses<p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 col-lg-6">
-                    <div class="brochure-info">
+                <div class="col-xs-12 col-md-12 col-lg-6 d-flex align-items-center">
+                    <div data-aos="fade-in" class="brochure-info">
                         <h1>Our Disinfecting techniques and attention to details is what distinguishes us.
                         </h1>
                         <a class="btn" href="brochure.pdf" target="blank" rel="nofollow">DOWNLOAD BROCHURE</a>
@@ -110,12 +113,11 @@
             </div>
             <hr />
             <div id="services" class="row services part-1">
-                <h2 class="text-center mb-5">Why choose Degree Primero Disinfection Service?</h2>
-                <div class="col-xs-12 col-md-6 col-lg-6 img">
-                    <!-- <img src="images/services/services1.png"> -->
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-6 info">
-                    <h3 class="blue">Disinfection Solution</h3>
+                <h2 data-aos="fade-down" class="text-center mb-5">Why choose Degree Primero Disinfection Service?</h2>                
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 col-lg-6 img"></div>
+                <h3 class="blue hide">Disinfection Solution</h3>
+                <div data-aos="fade-in" class="col-xs-12 col-md-6 col-lg-6 info">
+                    <h3 class="blue show">Disinfection Solution</h3>
                     <p>
                         We use hospital grade disinfectants only<br /> which are recommended by EPA(Environmental
                         protection agency) to fight against COVID-19
@@ -129,8 +131,9 @@
             </div>
             <hr />
             <div class="row services part-2">
-                <div class="col-xs-12 col-md-6 col-lg-6 info">
-                    <h3 class="blue">Spraying Machines</h3>
+                <h3 class="blue hide">Spraying Machines</h3>
+                <div data-aos="fade-in" class="col-xs-12 col-md-6 col-lg-6 info">
+                    <h3 class="blue show">Spraying Machines</h3>
                     <p>
                         Electrostatic and Knapsack spraying machines used to apply disinfectant in all surfaces for open
                         areas and manual disinfection of key touch points covering door handles , handrails , push
@@ -141,16 +144,17 @@
                         entire surface regardless of shape size and form .
                     </p>
                 </div>
-                <div class="col-xs-12 col-md-6 col-lg-6 order-first order-md-6 img"></div>
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 col-lg-6 order-first order-md-6 img"></div>
             </div>
             <hr />
             <div class="row services part-3">
-                <div class="col-xs-12 col-md-6 col-lg-6 img"></div>
-                <div class="col-xs-12 col-md-6 col-lg-6 info">
-                    <h3 class="blue">Disinfection Crew</h3>
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 col-lg-6 img"></div>
+                <h3 class="blue hide">Disinfection Crew</h3>
+                <div data-aos="fade-in" class="col-xs-12 col-md-6 col-lg-6 info">
+                    <h3 class="blue show">Disinfection Crew</h3>
                     <p>
                         All our disinfection staff are extensively<br />
-                        trained on the process and<br />
+                        trained on the process and
                         will provide you a thorough<br />
                         briefing prior to serving you.<br /><br />
                         Our qualified technicians will be equipped with necessary personal protective equipment (PPE) ,
@@ -161,7 +165,7 @@
                 </div>
             </div>
             <hr />
-            <div class="services mb-0">
+            <div data-aos="fade-in" class="services mb-0">
                 <h2 class="text-center mb-5">Why do you need Disinfection?</h2>
                 <p>In order to address the recent public health concerns, our commercial disinfection
                     teams are working round the clock across Riyadh to protect and disinfect the offices of our
@@ -198,28 +202,28 @@
         </div>
     </div>
     <div class="we-do">
-        <h2 class="text-center mb-5">Where All we do</h2>
+        <h2 data-aos="fade-down" class="text-center mb-5">Where all we do</h2>
         <div class="container">
             <div class="row">
-                <div class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div data-aos="fade-left" class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
                     <div class="section">
                         <img src="images/icons/Factory.svg">
                         <h3>Factories</h3>
                     </div>
                 </div>
-                <div class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div data-aos="fade-right" class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
                     <div class="section">
                         <img src="images/icons/Warehouse.svg">
                         <h3>Ware Houses</h3>
                     </div>
                 </div>
-                <div class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div data-aos="fade-left" class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
                     <div class="section">
                         <img src="images/icons/Office.svg">
                         <h3>Offices</h3>
                     </div>
                 </div>
-                <div class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div data-aos="fade-right" class="box col-xs-6 col-sm-6 col-md-3 col-lg-3">
                     <div class="section">
                         <img src="images/icons/Resturant and cafe.svg">
                         <h3>Resturants & Cafes</h3>
@@ -229,12 +233,12 @@
         </div>
     </div>
     <div class="product" id="product">
-        <h2 class="text-center mb-4">Our Product</h2>
+        <h2 data-aos="fade-down" class="text-center mb-4">Our Product</h2>
         <div class="container">
             <hr />
             <div class="row">
-                <div class="col-xs-12 col-md-6 col-lg-6">
-                    <h3 class="mb-4">Vital Oxide Disinfectant spray</h3>
+                <div data-aos="fade-in" class="col-xs-12 col-md-6 col-lg-6">
+                    <h3 class="mb-4">Vinner Vital Oxide Disinfectant spray</h3>
                     <p>A Handy Vital Oxide 100ml spray bottle Eco
                         friendly & Hospital Grade Disinfectant for
                         your daily use.<br />
@@ -253,8 +257,7 @@
                         form a nano layer for protection which can
                         be used in any hard or soft surfaces.</p>
                 </div>
-                <div class="col-xs-12 col-md-6 col-lg-6">
-                    <img>
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 order-first order-md-6 col-lg-6 product-img">
                 </div>
             </div>
             <hr />
@@ -264,13 +267,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-lg-6">
-                    <h2 class="text-left">About Us</h2>
+                    <h2 data-aos="fade-down" class="text-left">About Us</h2>
                     <br />
-                    <p>Degree Primero Maintenance & Cleaning EST.
+                    <p data-aos="fade-in">Degree Primero Maintenance & Cleaning EST.
                         is one of the specialized companies for
                         Disinfection Services in Riyadh & Dammam.</p>
                     <br />
-                    <p>The Company has grown to achieve
+                    <p data-aos="fade-in">The Company has grown to achieve
                         commanding heights in a very short period
                         of time in Disinfection sector by providing
                         commendable services. This had been
@@ -286,15 +289,15 @@
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-6">
                     <div class="mission">
-                        <h3>Our Mission</h3>
+                        <section class="d-flex justify-content-start"><div class="mission-logo"></div><h3 data-aos="fade-down">Our Mission</h3></section>
                         <br />
-                        <p>To provide top quality disinfection services
+                        <p data-aos="fade-in">To provide top quality disinfection services
                             to promote safer breathing environment with
                             100% customer satisfaction.</p>
                         <hr />
-                        <h3>Our Vision</h3>
+                        <section class="d-flex justify-content-start"><div class="vision-logo"></div><h3 data-aos="fade-down">Our Vision</h3></section>
                         <br />
-                        <p>Our vision is to be the best Disinfection
+                        <p data-aos="fade-in">Our vision is to be the best Disinfection
                             (sterilization) service provider in KSA, catering
                             to both residential & commercial entities
                             by 2021. We intend to keep the customer
@@ -311,32 +314,32 @@
         </div>
     </div>
     <div class="clients">
-        <h2 class="text-center mb-4">Our Clients</h2>
+        <h2 data-aos="fade-down" class="text-center mb-4">Our Clients</h2>
         <div class="container">
-            <div class="row">
+            <div data-aos="fade-in" class="row">
                 <p></p>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/client/AgreedTech.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/ARMS.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/Day-n-Day.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/Desert-Ice-company.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/Krunch-time.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/NTCC.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/Reftco.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/RME.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/Sultan.jpg"></div>
-                        <div class="swiper-slide"><img src="images/client/S.J-IRON.jpg"></div>
+                        <div class="swiper-slide"><img src="images/client/AgreedTech.png"></div>
+                        <div class="swiper-slide"><img src="images/client/ARMS.png"></div>
+                        <div class="swiper-slide"><img src="images/client/Day-n-Day.png"></div>
+                        <div class="swiper-slide"><img src="images/client/Desert-Ice-company.png"></div>
+                        <div class="swiper-slide"><img src="images/client/KRUNCH-TIME.png"></div>
+                        <div class="swiper-slide"><img src="images/client/NTCC.png"></div>
+                        <div class="swiper-slide"><img src="images/client/Reftco.png"></div>
+                        <div class="swiper-slide"><img src="images/client/RME.png"></div>
+                        <div class="swiper-slide"><img src="images/client/Sultan.png"></div>
+                        <div class="swiper-slide"><img src="images/client/S.J-IRON.png"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="connect" id="connect">
-        <h2 class="text-center mb-4">Contact Us</h2>
+        <h2 data-aos="fade-down" class="text-center mb-4">Contact Us</h2>
         <div class="container">
             <div class="row">
-                <form class="col-xs-12 col-md-6 col-lg-6" id="reused_form" data-netlify="true" >
+                <form data-aos="fade-in" class="col-xs-12 col-md-6 col-lg-6" id="reused_form" >
                     <div>
                         <div class="mt-3">
                             <input class="width" name="name" type="text" placeholder="Name">
@@ -352,7 +355,7 @@
                         <button class="btn" type="submit">Submit</button>
                     </div>
                 </form>
-                <div class="col-xs-12 col-md-6 col-lg-6 order-first order-md-6 d-flex justify-content-end">
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 col-lg-6 order-first order-md-6 d-flex justify-content-end">
                     <img src="images/icons/Contact.svg">
                 </div>
             </div>
@@ -360,37 +363,56 @@
     </div>
     <footer>
         <div class="container">
-            <h5 class="text-center mb-3">LET'S WORK TOGETHER</h5>
-            <h2 class="text-center mb-5">info@degreeprimero.com</h2>
-            <div class="row">
-                <div class="section col-6 col-sm-6 col-md-3 col-lg-3">
-                    <img src="images/icons/Clock.svg">
+            <h5 data-aos="fade-down" class="text-center mb-3">LET'S WORK TOGETHER</h5>
+            <h2 data-aos="fade-in" class="text-center mb-5">info@degreeprimero.com</h2>
+            <div data-aos="fade-in" class="row justify-content-around">
+                <div class="section col-6 col-sm-6 col-md-2 col-lg-2">
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <img src="images/icons/Clock.svg">
+                        <span>Working Hours</span>
+                    </div>
                     <div>
-                        <p>WORKING HOURS</p>
-                        <span>8:00 - 18:00</span>
+                        <p>8:00 - 18:00</p>
                     </div>
                 </div>
-                <div class="section col-6 col-sm-6 col-md-3 col-lg-3">
-                    <img src="images/icons/location.svg">
+                <div class="section col-6 col-sm-6 col-md-2 col-lg-2">
+                    <div class="d-flex justify-content-around align-items-center mb-3">                    
+                        <img src="images/icons/pin.svg">
+                        <span>Location</span>
+                    </div>
                     <div>
-                        <p>Location</p>
-                        <span>Riyadh & Dammam<br />K.S.A</span>
+                        <p>Riyadh & Dammam K.S.A</p>
                     </div>
                 </div>
-                <div class="section col-6 col-sm-6 col-md-3 col-lg-3">
-                    <img src="images/icons/call.svg">
-                    <div>
-                        <p>Reach Us</p>
-                        <a href="tel:+966501746423">+966501746423</a><br />
-                        <a href="tel:+966501815238">+966501815238</a>
+                <div class="section col-6 col-sm-6 col-md-2 col-lg-2">
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <img src="images/icons/call.svg">
+                        <span>Reach Us</span>
+                    </div>
+                    <div class="text-center">
+                            <a href="tel:+966501746423">+966501746423</a>
+                            <a href="tel:+966501815238">+966501815238</a>
                     </div>
                 </div>
-                <div class="section col-6 col-sm-6 col-md-3 col-lg-3">
-                    <img src="images/icons/paper plane.svg">
-                    <div>
-                        <p>Write Us</p>
+                <div class="section col-6 col-sm-6 col-md-2 col-lg-2">
+                    <div class="d-flex justify-content-around align-items-center mb-3">                        
+                        <img src="images/icons/paper plane.svg">
+                        <span>Write Us</span>
+                    </div>
+                    <div class="text-center">
                         <a href="mailto:info@degreeprimero.com">info@degreeprimero.com</a>
                         <a href="mailto:sales@degreeprimero.com">sales@degreeprimero.com</a>
+                    </div>
+                </div>
+                <div class="section col-6 col-sm-6 col-md-2 col-lg-2">
+                    <div class="d-flex justify-content-around align-items-center mb-3">
+                        <img src="images/icons/followers.svg">
+                        <span>Follow Us</span>
+                    </div>  
+                    <div class="follow-us">
+                        <a href="" target="blank"></a>
+                        <a href="" target="blank"></a>
+                        <a href="" target="blank"></a>
                     </div>
                 </div>
             </div>
@@ -402,6 +424,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/80efede78c.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script/script.js"></script>
 </body>
 
